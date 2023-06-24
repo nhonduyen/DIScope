@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <p>Refference <a href="https://www.c-sharpcorner.com/article/understanding-addtransient-vs-addscoped-vs-addsingleton-in-asp-net-core/" target="_blank">link</a></p>
+    <p>With a transient service, a new instance is provided every time an instance is requested whether it is in the scope of same http request or across different http requests.</p>
+    <p>With a scoped service we get the same instance within the scope of a given http request but a new instance across different http requests.</p>
+    <p>With Singleton service, there is only a single instance. An instance is created, when service is first requested and that single instance single instance will be used by all subsequent http request throughout the application.</p>
+    <hr />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Service Type</th>
+                <th>First Instance Id</th>
+                <th>Second Instance Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="info">
+                <td>Transient</td>
+                <td>@ViewBag.ServiceTransientId</td>
+                <td>@ViewBag.ServiceTransientId1</td>
+            </tr>
+            <tr class="success">
+                <td>Scoped</td>
+                <td>@ViewBag.ServiceScopeId</td>
+                <td>@ViewBag.ServiceScopeId1</td>
+            </tr>
+            <tr class="danger">
+                <td>Singleton</td>
+                <td>@ViewBag.ServiceSingletonId</td>
+                <td>@ViewBag.ServiceSingletonId1</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

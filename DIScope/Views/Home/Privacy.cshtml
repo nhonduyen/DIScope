@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Service Type</th>
+            <th>First Instance Id</th>
+            <th>Second Instance Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="info">
+            <td>Transient</td>
+            <td>@ViewBag.ServiceTransientId</td>
+            <td>@ViewBag.ServiceTransientId1</td>
+        </tr>
+        <tr class="success">
+            <td>Scoped</td>
+            <td>@ViewBag.ServiceScopeId</td>
+            <td>@ViewBag.ServiceScopeId1</td>
+        </tr>
+        <tr class="danger">
+            <td>Singleton</td>
+            <td>@ViewBag.ServiceSingletonId</td>
+            <td>@ViewBag.ServiceSingletonId1</td>
+        </tr>
+    </tbody>
+</table>
